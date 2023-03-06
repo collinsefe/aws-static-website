@@ -1,5 +1,3 @@
-
-
 #------------------------------------------------------------------------------
 # CloudFront Origin Access Identity
 #------------------------------------------------------------------------------
@@ -176,7 +174,8 @@ resource "aws_cloudfront_distribution" "website" {
       }
     }
   }
-
+  
+  /*
   dynamic "custom_error_response" {
     for_each = var.cloudfront_custom_error_responses
     content {
@@ -186,6 +185,22 @@ resource "aws_cloudfront_distribution" "website" {
       response_page_path    = custom_error_response.value.response_page_path
     }
   }
+  */
+  
+ custom_error_response {
+        error_caching_min_ttl = 86400
+        error_code = 404
+        response_code = 200
+        response_page_path = "/error.html"
+ }
+
+  custom_error_response {
+        error_caching_min_ttl = 86400
+        error_code = 403
+        response_code = 200
+        response_page_path = "/error.html"
+ }
+    
 
   default_root_object = var.cloudfront_default_root_object
   enabled             = true

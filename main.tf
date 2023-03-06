@@ -9,7 +9,6 @@ locals {
 #------------------------------------------------------------------------------
 # S3 BUCKET - For access logs
 #------------------------------------------------------------------------------
-#tfsec:ignore:aws-s3-enable-versioning
 module "s3_logs_bucket" {
   providers = {
     aws = aws.main
