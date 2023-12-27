@@ -10,15 +10,15 @@ terraform {
 
 terraform {
   backend "s3" {
-    bucket = "collinsorighose-tf-state"
-    key    = "work/demo/elsivier/website/terraform.tfstate"
+    bucket = "terraform-state-01101960"
+    key    = "work/demo/s3/website/terraform.tfstate"
     region = "eu-west-2"
   }
 }
 
 provider "aws" {
   alias                       = "main"
-  region                      = "us-east-1"
+  region                      = "eu-west-2"
   skip_credentials_validation = true
   skip_requesting_account_id  = true
   skip_metadata_api_check     = true
@@ -29,7 +29,7 @@ provider "aws" {
 
 provider "aws" {
   alias                       = "acm_provider"
-  region                      = "us-east-1"
+  region                      = "eu-west-2"
   skip_credentials_validation = true
   skip_requesting_account_id  = true
   skip_metadata_api_check     = true
