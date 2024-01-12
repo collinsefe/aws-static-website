@@ -22,9 +22,6 @@ module "s3_logs_bucket" {
   aws_principals_identifiers    = formatlist("arn:aws:iam::%s:root", var.aws_accounts_with_read_view_log_bucket)
   block_s3_bucket_public_access = true
   s3_bucket_force_destroy       = var.log_bucket_force_destroy
-  # enable_s3_bucket_server_side_encryption        = var.enable_s3_bucket_server_side_encryption
-  # s3_bucket_server_side_encryption_sse_algorithm = var.s3_bucket_server_side_encryption_sse_algorithm
-  # s3_bucket_server_side_encryption_key           = var.s3_bucket_server_side_encryption_key
 
   tags = merge({
     Name = "${var.name_prefix}-logs"
@@ -82,8 +79,9 @@ resource "aws_route53_record" "acm_certificate_validation_records" {
   records         = [each.value.record]
   ttl             = 30
   type            = each.value.type
-  #zone_id         = var.create_route53_hosted_zone ? aws_route53_zone.hosted_zone[0].zone_id : var.route53_hosted_zone_id
+  #zone_id         = var.create_route53_hosted_zone #? aws_route53_zone.hosted_zone[0].zone_id : var.route53_hosted_zone_id
   zone_id = data.aws_route53_zone.selected.zone_id
+
 }
 
 
@@ -103,4 +101,6 @@ resource "aws_acm_certificate_validation" "cert_validation" {
     create = "60m"
   }
 }
+
+
 
