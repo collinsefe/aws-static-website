@@ -16,7 +16,6 @@ module "s3_logs_bucket" {
 
   source  = "cn-terraform/logs-s3-bucket/aws"
   version = "1.0.5"
-  # source  = "../terraform-aws-logs-s3-bucket"
 
   name_prefix                   = "${var.name_prefix}-log-bucket"
   aws_principals_identifiers    = formatlist("arn:aws:iam::%s:root", var.aws_accounts_with_read_view_log_bucket)

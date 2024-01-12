@@ -31,7 +31,6 @@ In order to run all checks at any point run the following command:
         pre-commit run --all-files
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-
 ## Requirements
 
 | Name | Version |
@@ -129,5 +128,5 @@ In order to run all checks at any point run the following command:
 
 ## Outputs
 
-TBC
+No outputs.
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
