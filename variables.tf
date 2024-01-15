@@ -97,7 +97,7 @@ variable "website_cors_expose_headers" {
 variable "website_cors_max_age_seconds" {
   description = "(Optional) Specifies time in seconds that browser can cache the response for a preflight request. Defaults to 3600"
   type        = number
-  default     = 3600
+  default     = 60
 }
 
 variable "website_versioning_status" {
