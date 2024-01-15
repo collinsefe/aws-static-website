@@ -128,5 +128,5 @@ In order to run all checks at any point run the following command:
 
 ## Outputs
 
-No outputs.
+WIP.
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
