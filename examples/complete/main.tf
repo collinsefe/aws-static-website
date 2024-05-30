@@ -13,7 +13,7 @@ module "demo_website" {
 
   create_route53_hosted_zone = false
 
-  aws_accounts_with_read_view_log_bucket = ["684361860346"]
+  aws_accounts_with_read_view_log_bucket = ["905418009251"]
 
   website_server_side_encryption_configuration = {
     rule = {
