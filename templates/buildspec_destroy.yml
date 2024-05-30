@@ -25,7 +25,6 @@ phases:
     commands:
       - "cd ${CODEBUILD_SRC_DIR}/${CODE_SRC_DIR}"
       - "terraform chdir=../examples/complete destroy --auto-approve"
-
 artifacts:
   files:
     - '**/*'
