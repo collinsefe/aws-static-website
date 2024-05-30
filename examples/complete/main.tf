@@ -23,5 +23,5 @@ module "demo_website" {
     }
   }
 
-  log_bucket_force_destroy = false
+  log_bucket_force_destroy = true
 }
