@@ -4,7 +4,6 @@ terraform {
     aws = {
       source                = "hashicorp/aws"
       version               = ">= 4.0"
-      configuration_aliases = [aws.main, aws.acm_provider]
     }
   }
 }
