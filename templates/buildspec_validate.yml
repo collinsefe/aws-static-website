@@ -40,7 +40,7 @@ phases:
     commands:
       - "cd ${CODEBUILD_SRC_DIR}/${CODE_SRC_DIR}"
       - "echo ## TERRAFORM INIT : Initialize the Terraform Workspace"
-      - "terraform init"
+      - "terraform -chdir=../examples/complete init"
       - "echo ## VALIDATION : Starting ..."
       - "mkdir -p ${CODEBUILD_SRC_DIR}/reports"
       - "/bin/bash ${CODEBUILD_SRC_DIR}/${SCRIPT_DIR}/tf_ssp_validation.sh ${SKIPVALIDATIONFAILURE} ${ENABLE_TFVALIDATE} ${ENABLE_TFFORMAT} ${ENABLE_TFCHECKOV} ${ENABLE_TFSEC}"
