@@ -10,8 +10,8 @@ terraform {
 
 terraform {
   backend "s3" {
-    bucket = "collinsorighose-tf-state"
-    key    = "work/demo/merapar/website/terraform.tfstate"
+    bucket = "terraform-tfstate-base-infra"
+    key    = "devops/website/terraform.tfstate"
     region = "eu-west-2"
   }
 }
