@@ -9,7 +9,7 @@ resource "aws_kms_key" "mykey" {
 }
 
 resource "aws_s3_bucket" "website" {
-  bucket        = "my-new-local-hkgdlysdclhbashj-09"
+  bucket        = "${var.project_name}-ccoe-09-"
   force_destroy = true
 
 }
