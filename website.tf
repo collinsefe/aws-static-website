@@ -9,7 +9,7 @@ resource "aws_kms_key" "mykey" {
 }
 
 resource "aws_s3_bucket" "website" {
-  bucket        = "${var.project_name}-ccoe-09-"
+  bucket        = "ccoe-pipeline-test-bucket-ftsbjsnghdhggd"
   force_destroy = true
 
 }
